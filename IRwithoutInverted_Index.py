@@ -115,12 +115,14 @@ def amp(x):
         s+=i**2
     return math.sqrt(s)
 #----------------------------Amplitude---------------------------------------#
-    
-
+    d = []
 
 #------------------------Cosine-Similarity-----------------------------------#
 for index in range(N):
     cos = float(np.dot(matrix_IDF[index],matrix_q))/(amp(matrix_IDF[index])*amp(matrix_q))
     if cos > 0.0:
-        print(cos,index+1)
+        d.apend((index,cos)
+sorted_d = sorted(d, key=operator.itemgetter(1),reverse=True)
+d = sorted_d
+print(d)
 #------------------------Cosine-Similarity-----------------------------------#
