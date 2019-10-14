@@ -149,7 +149,7 @@ for index in filt_doc:
     COS[index] = cos
 #for index in filt_doc:
 #    COS = X_temp[index-1]
-sorted_COS = sorted(COS.items() , key = operator.itemgetter(0) , reverse=True)
+sorted_COS = sorted(COS.items() , key = operator.itemgetter(1) , reverse=True)
 sorted_d = sorted(d, key=operator.itemgetter(1),reverse=True)
 d = sorted_d
 print("Search Complete. Results Fetched!")
